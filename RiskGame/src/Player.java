@@ -1,8 +1,4 @@
 //package sample.model;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.paint.Color;
-//import sample.controller.LoadgameController;
-
 import java.util.*;
 import java.util.Map;
 
@@ -10,7 +6,7 @@ import java.util.Map;
  * This class maintains the player details and implements methods related to the player.
  * @author Himani
  */
-public class Player extends Observable {
+public class Player extends Observable{
 
     private String playerId;
     private String playerName;
@@ -462,7 +458,7 @@ public class Player extends Observable {
     /**
      * This method returns list of dice values after rolling the dice.
      * @param noOfDice
-     * @return dicelist
+     * @return diceList
      */
     public ArrayList<Integer> rollDice(int noOfDice) {
 
@@ -531,21 +527,7 @@ public class Player extends Observable {
         System.out.println("");
     }
 
-    /**
-     * To display the dice.
-     * @param attackerDiceList
-     * @param attackedDiceList
-     */
-    public void displayTheDice(ArrayList<Integer> attackerDiceList,ArrayList<Integer> attackedDiceList) {
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample/view/loadGame.fxml"));
-        LoadgameController lgcController = loader.getController();
-
-        lgcController.displayAttackerDiceToTheConsole(attackerDiceList);
-        lgcController.displayDefenderDiceToTheConsole(attackedDiceList);
-    }
-
-    /**
+     /**
      * This method checks if the territory has lost all armies during the attack.
      * @param Country
      * @return boolean
