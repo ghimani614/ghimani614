@@ -112,7 +112,7 @@ public class Units {
      * get the territory name.
      * @return territorieName
      */
-    public String getTerritorieName() {
+    public String getTerritoryName() {
         return territoryName;
     }
 
